@@ -73,7 +73,7 @@
 ------------
 - ##### 使用方法
 a. 选择C/C++编译器，在Matlab命令行窗口中输入mex -setup/mex -setup c/mex -setup cpp可选择需要VS或者GCC编译器
-<br>![img1](https://github.com/UlovHer/CompileMex/blob/master/imgs/1.png)<br>
+<br>![img1](/imgs/1.png)<br>
 b. 将test_mex.cpp文件考到Matlab的工作文件夹下，mex -v -compatibleArrayDims test_mex.cpp编译文件，生成test_mex.mexw64文件。接着像调用Matlab函数一样调用该文即可。
 <br>![img2](/imgs/2.png)<br>
 c. 要调用 MEX 函数，请使用该文件的名称，但不带文件扩展名。调用语法取决于 MEX 函数定义的输入和输出参数。调用时，MEX 文件必须位于 MATLAB 路径或当前工作文件夹中。
