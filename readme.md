@@ -5,7 +5,6 @@
 ------------
 - ##### 创建方法：
 &ensp;&ensp;&ensp;&ensp;&ensp;参考Matlab自带说明文档的 arrayProduct.c示例编写C/C++面向过程的源码文件。mex的源文件一定要include头文件"mex.h“，mex源文件的入口函数为void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[])，nlhs( number left hand s):左边参数个数，也就是matlab函数输出值得个数，mxArray *plhs[]是一个指针数组，数组中的每一个元素都是一个指针，指向输出的矩阵；nrhs 是右边参数个数，也就是输入参数的个数，mxArray *prhs[]数组中的每个指针指向输入矩阵。mxGetPr(i)函数可以返回一个double*型的指针，指向矩阵的第i个元素，在matlab代码中调用：mex(a)，那也就是 prhs[0]是输入矩阵a的地址。或者使用mxGetDoubles(prhs[1])，也可以获取到输入矩阵a。(Matlab中默认的数据类型是double)
-取到输入矩阵a。(Matlab中默认的数据类型是double)
 ```cpp
 	#include "mex.h"
 	#include <iostream>
